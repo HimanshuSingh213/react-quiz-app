@@ -23,10 +23,10 @@ export default function HeroPage() {
             </div>
 
             <div
-                className='my-8 flex justify-center items-center'
+                className='my-8 flex justify-center items-center flex-row'
             >
 
-                <CTA text='Choose a topic ⟶' clickHandler={clickHandler} />
+                <CTA text='Choose a topic' clickHandler={clickHandler} />
             </div>
 
             <div className='my-8 grid gap-2 items-stretch w-full max-w-4xl mx-auto grid-cols-1 sm:grid-cols-3'>

@@ -2,14 +2,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import NavBar from './components/common/NavBar';
 import HeroPage from './components/main-page/HeroPage';
 import { useQuiz } from './UseQuiz';
+import QuizSelector from "./components/quiz-page/QuizSelector";
 
 function App() {
-  const { page, setPage } = useQuiz();
+  const { page } = useQuiz();
 
   return (
-    <div className='bg-neutral-950 h-full w-full'>
+    <div className='bg-neutral-950 h-full w-full overflow-hidden'>
 
-      <section className={`w-full min-h-screen max-w-5xl py-12 mx-auto ${page === "main"? "overflow-hidden" : ""}`}>
+      <section className={`w-full min-h-screen max-w-5xl py-12 mx-auto`}>
         <NavBar />
 
         <AnimatePresence>
@@ -20,6 +21,7 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2, delay: 0.1 }}
+              className="overflow-hidden"
             >
               <HeroPage />
             </motion.div>
@@ -32,14 +34,9 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4, delay: 0.1 }}
+              className="overflow-hidden"
             >
-              <p className='text-white text-2xl text-center mt-20'>Quiz page — starts here</p>
-              <button
-                onClick={() => setPage("main")}
-                className='block mx-auto mt-6 text-neutral-400 underline cursor-pointer hover:text-white'
-              >
-                back
-              </button>
+              <QuizSelector/>
             </motion.div>
           )}
         </AnimatePresence>

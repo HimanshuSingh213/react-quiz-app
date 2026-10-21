@@ -5,10 +5,13 @@ const QuizContext = createContext(null);
 export default function QuizProvider({ children }) {
     
     const [page, setPage] = useState("main");
+    const [topic, setTopic] = useState({});
 
     const value = {
         page,
-        setPage
+        setPage,
+        topic,
+        setTopic
     }
 
     return (
