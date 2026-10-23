@@ -9,14 +9,14 @@ export default function HeroPage() {
     const { setPage } = useQuiz();
 
     const clickHandler = () => {
-        setPage("quizPage");
+        setPage("quizTopics");
     }
 
     return (
         <div className='overflow-hidden'>
             <Intro />
 
-            <div className='flex gap-3 justify-center items-center'>
+            <div className='flex flex-wrap gap-2 sm:gap-3 justify-center items-center'>
                 {["15 Questions", "4 Topics", "Instant Results"].map((str, idx) => (
                     <Expo text={str} key={str} idx={idx} />
                 ))}

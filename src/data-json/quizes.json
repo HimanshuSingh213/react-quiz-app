@@ -1,0 +1,113 @@
+{
+  "JavaScript": [
+    {
+      "id": 1,
+      "question": "Which of these is NOT a JavaScript primitive type?",
+      "options": ["string", "number", "object", "boolean"],
+      "answer": 2,
+      "explanation": "JavaScript has seven primitive types: string, number, boolean, null, undefined, symbol and bigint. `object` is a reference type, so it is not a primitive."
+    },
+    {
+      "id": 2,
+      "question": "What does the strict equality operator === compare?",
+      "options": ["Only the values", "Both value and type", "Only the types", "The memory address"],
+      "answer": 1,
+      "explanation": "=== is strict equality: it compares both the value and the type, so `1 === \"1\"` is false. The loose == operator converts types before comparing."
+    },
+    {
+      "id": 3,
+      "question": "Which array method adds an item to the END of an array?",
+      "options": ["shift()", "unshift()", "push()", "pop()"],
+      "answer": 2,
+      "explanation": "push() adds an item to the end of an array. shift() removes from the front, unshift() adds to the front, and pop() removes from the end."
+    },
+    {
+      "id": 4,
+      "question": "What does typeof null return?",
+      "options": ["\"null\"", "\"undefined\"", "\"object\"", "\"number\""],
+      "answer": 2,
+      "explanation": "A well-known quirk of the language: typeof null returns \"object\". It dates back to the original implementation and was kept for backwards compatibility, even though null is a primitive."
+    },
+    {
+      "id": 5,
+      "question": "Which function converts a string into a whole number?",
+      "options": ["parseInt()", "toString()", "Number.isNaN()", "join()"],
+      "answer": 0,
+      "explanation": "parseInt() reads a string and returns a whole number. toString() converts a value to a string, Number.isNaN() checks whether a value is NaN, and join() joins array elements into a string."
+    }
+  ],
+  "React": [
+    {
+      "id": 6,
+      "question": "Which hook is used to store local state in a component?",
+      "options": ["useEffect", "useState", "useMemo", "useRef"],
+      "answer": 1,
+      "explanation": "useState returns the current state value and a setter to update it. useEffect runs side effects, useMemo memoises a computed value, and useRef holds a mutable reference."
+    },
+    {
+      "id": 7,
+      "question": "In React, what are props?",
+      "options": ["Data passed from a parent to a child component", "Private state inside a component", "CSS classes applied to a component", "Global variables shared by every component"],
+      "answer": 0,
+      "explanation": "Props are read-only inputs passed from a parent component to a child. They are not state, and a child must never mutate them directly."
+    },
+    {
+      "id": 8,
+      "question": "Which hook runs side effects after render?",
+      "options": ["useState", "useEffect", "useContext", "useReducer"],
+      "answer": 1,
+      "explanation": "useEffect runs side effects after render — data fetching, subscriptions or manual DOM updates. useState holds state, useContext reads context, and useReducer handles complex state logic."
+    },
+    {
+      "id": 9,
+      "question": "What should every item in a rendered list have?",
+      "options": ["A unique key prop", "A ref prop", "Its own state", "An onClick handler"],
+      "answer": 0,
+      "explanation": "A unique key lets React tell which list items changed, were added or were removed, so it can update the DOM efficiently and correctly."
+    },
+    {
+      "id": 10,
+      "question": "Which array method is commonly used to render a list in JSX?",
+      "options": [".filter()", ".reduce()", ".map()", ".sort()"],
+      "answer": 2,
+      "explanation": "map() transforms each item into a JSX element and returns the array to render. filter(), reduce() and sort() do not return an array of JSX elements for rendering."
+    }
+  ],
+  "HTML & CSS": [
+    {
+      "id": 11,
+      "question": "Which HTML tag creates a hyperlink?",
+      "options": ["<link>", "<a>", "<href>", "<nav>"],
+      "answer": 1,
+      "explanation": "The <a> tag with an href attribute creates a clickable hyperlink. <link> is used to link external resources such as stylesheets, not to make links on the page."
+    },
+    {
+      "id": 12,
+      "question": "Which CSS property changes the colour of text?",
+      "options": ["background", "font-weight", "color", "fill"],
+      "answer": 2,
+      "explanation": "The `color` property sets the colour of text. `background` sets the background, `font-weight` sets how bold the text is, and `fill` colours SVG shapes."
+    },
+    {
+      "id": 13,
+      "question": "Which display value turns an element into a flex container?",
+      "options": ["block", "flex", "inline", "grid-flow"],
+      "answer": 1,
+      "explanation": "display: flex turns an element into a flex container, which makes its direct children flex items that can be aligned and spaced with flexbox properties."
+    },
+    {
+      "id": 14,
+      "question": "Which CSS unit is relative to the ROOT font size?",
+      "options": ["px", "em", "rem", "vh"],
+      "answer": 2,
+      "explanation": "rem is relative to the root (<html>) font size, which makes it predictable for scaling. em is relative to the element's own font size, px is an absolute unit, and vh is relative to viewport height."
+    },
+    {
+      "id": 15,
+      "question": "Which property adds space INSIDE an element's border?",
+      "options": ["margin", "padding", "gap", "border-spacing"],
+      "answer": 1,
+      "explanation": "padding adds space inside an element, between its content and its border. margin adds space outside the border, separating the element from its neighbours."
+    }
+  ]
+}
